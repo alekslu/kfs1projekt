@@ -1,4 +1,6 @@
 # JSON konverter
+Käivitamiseks jooksuta main.py faili
+
 Projekti mõte on luua JSON konverter, mis:
 1) Võtab UI kaudu sisse JSON faili;
 2) Kuvab JSONi kasutajaliidesel
