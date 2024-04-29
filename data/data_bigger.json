@@ -1,0 +1,157 @@
+{
+	"expand": "renderedFields,names,schema,transitions,operations,editmeta,changelog,versionedRepresentations",
+	"id": "378822",
+	"self": "https://example.veeb/rest/api/2/issue/378822",
+	"key": "PIIR-2847",
+	"fields": {
+		"customfield_15084": null,
+		"customfield_15085": null,
+		"customfield_15082": null,
+		"customfield_15083": null,
+		"customfield_15086": null,
+		"customfield_15087": null,
+		"customfield_11960": null,
+		"resolution": {
+			"self": "https://example.veeb/rest/api/2/resolution/6",
+			"id": "6",
+			"description": "Standard resolutsioon mida kasutatakse tööülesannete sulgemisel",
+			"name": "Tehtud"
+		},
+		"customfield_11720": null,
+		"subtasks": [],
+		"issuetype": {
+			"self": "https://example.veeb/rest/api/2/issuetype/32",
+			"id": "32",
+			"description": "A task that needs to be done.",
+			"iconUrl": "https://example.veeb/secure/viewavatar?size=xsmall&avatarId=11778&avatarType=issuetype",
+			"name": "Task",
+			"subtask": false,
+			"avatarId": 11778
+		},
+		"customfield_14194": {
+			"self": "https://example.veeb/rest/api/2/customFieldOption/16575",
+			"value": "Ei",
+			"id": "16575",
+			"disabled": false
+		},
+		"customfield_14197": null,
+		"customfield_14198": {
+			"self": "https://example.veeb/rest/api/2/customFieldOption/16967",
+			"value": "Kõrge",
+			"id": "16967",
+			"disabled": false
+		},
+		"customfield_14199": null,
+		"customfield_11910": "N/A",
+		"timetracking": {
+			"timeSpent": "15m",
+			"timeSpentSeconds": 900
+		},
+		"customfield_13980": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@4a7b1c69[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@44b1f226[byInstanceType={stash=com.atlassian.jira.plugin.devstatus.summary.beans.ObjectByInstanceTypeBean@1a5144d8[count=2,name=Bitbucket]},overall=PullRequestOverallBean{stateCount=2, state='MERGED', details=PullRequestOverallDetails{openCount=0, mergedCount=2, declinedCount=0}}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@3e8cad55[byInstanceType={bamboo=com.atlassian.jira.plugin.devstatus.summary.beans.ObjectByInstanceTypeBean@2eeb49d8[count=5,name=Bamboo]},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@250356b1[failedBuildCount=3,successfulBuildCount=2,unknownBuildCount=0,count=5,lastUpdated=2024-03-07T09:26:58.366+0200,lastUpdatedTimestamp=2024-03-07T09:26:58.366+02:00]], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@6aa30425[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@319efa21[dueDate=<null>,overDue=false,state=<null>,stateCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@45cfd043[byInstanceType={bamboo=com.atlassian.jira.plugin.devstatus.summary.beans.ObjectByInstanceTypeBean@7a46a095[count=1,name=Bamboo]},overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@83611d4[showProjects=false,successfulCount=1,topEnvironments=[{projectUrl=https://build.asutus.sise/deploy/viewDeploymentProjectEnvironments.action?id=302219477, project=k8s frontend DEV, id=302318200, position=0, title=Piko-Frontend Dev, projectId=302219477, url=https://build.asutus.sise/deploy/viewEnvironment.action?id=302318200, status=DEPLOYED}],count=1,lastUpdated=<null>,lastUpdatedTimestamp=<null>]], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@4ebfad01[byInstanceType={stash=com.atlassian.jira.plugin.devstatus.summary.beans.ObjectByInstanceTypeBean@7549315d[count=3,name=Bitbucket]},overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@3ac47569[count=3,lastUpdated=2024-02-28T13:08:28.000+0200,lastUpdatedTimestamp=2024-02-28T13:08:28.000+02:00]], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@2c46b54[byInstanceType={},overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@312019a8[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>]]},configErrors=[],errors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":2,\"lastUpdated\":\"2024-02-28T13:08:28.152+0200\",\"stateCount\":2,\"state\":\"MERGED\",\"details\":{\"openCount\":0,\"mergedCount\":2,\"declinedCount\":0,\"total\":2},\"open\":false},\"byInstanceType\":{\"stash\":{\"count\":2,\"name\":\"Bitbucket\"}}},\"build\":{\"overall\":{\"count\":5,\"lastUpdated\":\"2024-03-07T09:26:58.366+0200\",\"failedBuildCount\":3,\"successfulBuildCount\":2,\"unknownBuildCount\":0},\"byInstanceType\":{\"bamboo\":{\"count\":5,\"name\":\"Bamboo\"}}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":1,\"lastUpdated\":null,\"topEnvironments\":[{\"projectUrl\":\"https://build.asutus.sise/deploy/viewDeploymentProjectEnvironments.action?id=302219477\",\"project\":\"k8s frontend DEV\",\"id\":302318200,\"position\":0,\"title\":\"Piko-Frontend Dev\",\"projectId\":302219477,\"url\":\"https://build.asutus.sise/deploy/viewEnvironment.action?id=302318200\",\"status\":\"DEPLOYED\"}],\"showProjects\":false,\"successfulCount\":1},\"byInstanceType\":{\"bamboo\":{\"count\":1,\"name\":\"Bamboo\"}}},\"repository\":{\"overall\":{\"count\":3,\"lastUpdated\":\"2024-02-28T13:08:28.000+0200\"},\"byInstanceType\":{\"stash\":{\"count\":3,\"name\":\"Bitbucket\"}}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
+		"customfield_12411": 0.0,
+		"customfield_13718": "2024-02-20",
+		"workratio": -1,
+		"customfield_11992": {
+			"self": "https://example.veeb/rest/api/2/customFieldOption/16995",
+			"value": "Isiku",
+			"id": "16995",
+			"disabled": false
+		},
+		"reporter": {
+			"self": "https://example.veeb/rest/",
+			"name": "",
+			"key": "eesnimi.nimi",
+			"emailAddress": "Eesnimi.Nimi@asutus.ee",
+			"avatarUrls": {
+				"48x48": "https://example.veeb/secure/useravatar?avatarId=12389",
+				"24x24": "https://example.veeb/secure/useravatar?size=small&avatarId=12389",
+				"16x16": "https://example.veeb/secure/useravatar?size=xsmall&avatarId=12389",
+				"32x32": "https://example.veeb/secure/useravatar?size=medium&avatarId=12389"
+			},
+			"displayName": "Eesnimi Nimi",
+			"active": true,
+			"timeZone": "Europe/Tallinn"
+		},
+		"customfield_15303": [
+			{
+				"issueKey": "TASK-2847",
+				"status": "UNCOVERED",
+				"statusStyle": "uncovered",
+				"ok": 0,
+				"okPercent": 0.0,
+				"okJql": "issueKey in ()",
+				"nok": 0,
+				"nokPercent": 0.0,
+				"nokJql": "issueKey in ()",
+				"notrun": 0,
+				"notrunPercent": 0.0,
+				"notRunJql": "issueKey in ()",
+				"unknown": 0,
+				"unknownPercent": 0.0,
+				"unknownJql": "issueKey in ()"
+			}
+		]
+	},
+	"transitions": [
+		{
+			"id": "51",
+			"name": "Reopen",
+			"description": "",
+			"opsbarSequence": 2147483647,
+			"to": {
+				"self": "https://example.veeb/rest/api/2/status/10053",
+				"description": "",
+				"iconUrl": "https://example.veeb/images/icons/statuses/open.png",
+				"name": "To Do",
+				"id": "10053",
+				"statusCategory": {
+					"self": "https://example.veeb/rest/api/2/statuscategory/2",
+					"id": 2,
+					"key": "new",
+					"colorName": "default",
+					"name": "To Do"
+				}
+			}
+		},
+		{
+			"id": "61",
+			"name": "Reopen and start progress",
+			"description": "",
+			"opsbarSequence": 2147483647,
+			"to": {
+				"self": "https://example.veeb/rest/api/2/status/10051",
+				"description": "",
+				"iconUrl": "https://example.veeb/images/icons/statuses/inprogress.png",
+				"name": "In Progress",
+				"id": "10051",
+				"statusCategory": {
+					"self": "https://example.veeb/rest/api/2/statuscategory/4",
+					"id": 4,
+					"key": "indeterminate",
+					"colorName": "inprogress",
+					"name": "In Progress"
+				}
+			}
+		},
+		{
+			"id": "141",
+			"name": "Testing",
+			"description": "",
+			"opsbarSequence": 2147483647,
+			"to": {
+				"self": "https://example.veeb/rest/api/2/status/10960",
+				"description": "",
+				"iconUrl": "https://example.veeb/images/icons/statuses/generic.png",
+				"name": "Testing",
+				"id": "10960",
+				"statusCategory": {
+					"self": "https://example.veeb/rest/api/2/statuscategory/4",
+					"id": 4,
+					"key": "indeterminate",
+					"colorName": "inprogress",
+					"name": "In Progress"
+				}
+			}
+		}
+	]
+}
