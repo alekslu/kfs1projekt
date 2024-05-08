@@ -5,8 +5,7 @@ import tkinter.scrolledtext as st
 
 checkbox_list_updated = list(filter(None, checkbox_list))
 checked_checkboxes = []
-#translated_checked_checboxes = []
-translated_checked_checboxes = ['batters.batter.id', 'batters.batter.type', 'batters']
+translated_checked_checboxes = []
 
 def create_checkboxes(values, parent_frame):
     for value in values:
@@ -14,7 +13,7 @@ def create_checkboxes(values, parent_frame):
         cb = tk.Checkbutton(parent_frame, text=value, variable=string_var, onvalue=value, offvalue='')
         cb.pack(anchor='w')
         checked_checkboxes.append(string_var)
-        print(string_var)
+        print("07052024-01",string_var)
 
 def confirm():
     translated_checked_checboxes.clear()
@@ -24,12 +23,38 @@ def confirm():
         text = string_var.get()
         if text:
             translated_checked_checboxes.append(text)
+    # Update the checked_frame with the values corresponding to the selected checkboxes
+    for checkbox_value in translated_checked_checboxes:
+        # Iterate over the JSON data
+        for item in json_data:
+            # Get the value of the checkbox recursively
+            value = get_nested_values(item, checkbox_value)
+            if value is not None:
+                # If the value is found, insert it into the checked_frame
+                if isinstance(value, list):
+                    for val in value:
+                        checked_frame.insert(tk.END, str(checkbox_value) + ' : ' + str(val) + '\n')
+                else:
+                    checked_frame.insert(tk.END, str(checkbox_value) + ' : ' + str(value) + '\n')
+            else:
+                checked_frame.insert(tk.END, str(checkbox_value) + ': //Väärtus puudub//')
+            
+
+    checked_frame.configure(state='disabled')
+
+    translated_checked_checboxes.clear()
+    checked_frame.configure(state='normal')
+    checked_frame.delete('1.0', tk.END)  # Clear existing content
+    for string_var in checked_checkboxes:
+        print(string_var)
+        text = string_var.get()
+        if text:
+            translated_checked_checboxes.append(text)
     # Update the checked_frame with the updated list of checked checkboxes
     for item in translated_checked_checboxes:
         checked_frame.insert(tk.END, item + '\n')
     print("translated_checked_checboxes", translated_checked_checboxes)
     checked_frame.configure(state='disabled')
-
 #
 window = tk.Tk()
 window.geometry("700x700")
