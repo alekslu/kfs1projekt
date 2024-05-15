@@ -40,7 +40,15 @@ def confirm():
                 checked_frame.insert(tk.END, str(checkbox_value) + ': //Väärtus puudub//')
 
     checked_frame.configure(state='disabled')
-
+    
+#  clear funktsioon on lingitud Puhasta kõik nupuga ja puhastab valitud checkboxid    
+def clear():
+    translated_checked_checboxes.clear()
+    checked_frame.configure(state='normal')
+    checked_frame.delete('1.0', tk.END)  # Clear existing content
+    for i in checked_checkboxes:
+        i.set('')
+ 
 #
 window = tk.Tk()
 window.geometry("700x700")
@@ -77,7 +85,11 @@ checked_frame.pack(fill='both', expand=True, padx=10, pady=10)
 
 # Confirm button
 kinnitaBtn = tk.Button(window, text="Kinnita valik", command=confirm)
-kinnitaBtn.pack(fill='both', padx=10, pady=10, expand=True)
+kinnitaBtn.pack(fill='both', padx=10, pady=5, expand=True)
+
+# Clear button
+puhastaBtn = tk.Button(window, bg='red', text="Puhasta valik", command=clear)
+puhastaBtn.pack(fill='y', padx=10, pady=5, expand=True)
 
 # Scrolled text for displaying JSON
 json_frame = st.ScrolledText(window, state='normal', height=50, width=70)
