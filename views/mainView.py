@@ -46,24 +46,43 @@ window = tk.Tk()
 window.geometry("700x700")
 window.title("Checkboxes for Values")
 
-#
-checkbox_frame = tk.Listbox(window)
-checkbox_frame.pack(padx=10, pady=10, side='left', fill='both')
-create_checkboxes(checkbox_list_updated, checkbox_frame)
+# Scrollable frame for checkboxes
+#https://blog.teclado.com/tkinter-scrollable-frames/
+checkbox_scrollable_frame = tk.Frame(window)
+checkbox_scrollable_frame.pack(padx=10, pady=10, side='left', fill='both', expand=False)
 
-#
+canvas = tk.Canvas(checkbox_scrollable_frame)
+scroll_bar = tk.Scrollbar(checkbox_scrollable_frame, orient="vertical", command=canvas.yview)
+scrollable_checkbox_frame = tk.Frame(canvas)
+
+scrollable_checkbox_frame.bind(
+    "<Configure>",
+    lambda e: canvas.configure(
+        scrollregion=canvas.bbox("all")
+    )
+)
+
+canvas.create_window((0, 0), window=scrollable_checkbox_frame, anchor="w")
+canvas.configure(yscrollcommand=scroll_bar.set)
+
+scroll_bar.pack(side='right', fill='y')
+canvas.pack(side='left', fill='both', expand=False)
+
+# Create checkboxes inside the scrollable frame
+create_checkboxes(checkbox_list_updated, scrollable_checkbox_frame)
+
+# Text frame for checked values
 checked_frame = tk.Text(window, height=5, width=30)
 checked_frame.pack(fill='both', expand=True, padx=10, pady=10) 
 
-#
+# Confirm button
 kinnitaBtn = tk.Button(window, text="Kinnita valik", command=confirm)
-kinnitaBtn.pack(fill='both', padx=10, pady=10)
+kinnitaBtn.pack(fill='both', padx=10, pady=10, expand=True)
 
-#
+# Scrolled text for displaying JSON
 json_frame = st.ScrolledText(window, state='normal', height=50, width=70)
-json_frame.pack(padx = 10, pady = 10)
+json_frame.pack(padx=10, pady=10, expand=True)
 json_frame.insert('1.0', str(json_str))
-json_frame.configure(state ='disabled')  
+json_frame.configure(state='disabled')  
 
-window.mainloop() 
-
+window.mainloop()
