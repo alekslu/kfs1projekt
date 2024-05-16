@@ -1,7 +1,7 @@
 # Importing required modules 
 import json
 
-#jsonFile = 'data/data.json'
+# jsonFile = 'data/data.json'
 jsonFile = 'data/data_bigger.json'
 
 with open(jsonFile, 'r') as inside:
