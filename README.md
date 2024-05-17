@@ -1,10 +1,5 @@
 # JSON konverter
-Mida teha?
-1) Checkboxide tulp scrollitavaks - suurte jsonite puhul ei mahu valikud ära
-2) Väljakuvatavad valikud (kui nt mitu elementi valitud) kuvada selgemalt
-3) VÕimalus luua nt tekstifail kus on kõik valitud elemendi/elementide väärtused kirjas?
-4) .. mis iganes pähe tuleb
-# JSON konverter
+
 Käivitamiseks jooksuta main.py faili
 
 Projekti mõte on luua JSON konverter, mis:
